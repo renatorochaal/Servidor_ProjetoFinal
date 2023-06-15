@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ProjetoFinalApplication",
+            "request": "launch",
+            "mainClass": "com.servidorSpotify.ProjetoFinal.ProjetoFinalApplication",
+            "projectName": "ProjetoFinal"
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

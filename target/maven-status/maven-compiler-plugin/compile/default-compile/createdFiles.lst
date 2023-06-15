@@ -1,0 +1,12 @@
+com\servidorSpotify\ProjetoFinal\Model\MusicaCurtidaModel.class
+com\servidorSpotify\ProjetoFinal\Model\DadosCloneSpotifyModel.class
+com\servidorSpotify\ProjetoFinal\Service\Database.class
+com\servidorSpotify\ProjetoFinal\Model\UsuarioModel.class
+com\servidorSpotify\ProjetoFinal\Controller\DadosController.class
+com\servidorSpotify\ProjetoFinal\Interface\DadosCloneSpotifyRepository.class
+com\servidorSpotify\ProjetoFinal\Controller\CloneSpotifyController.class
+com\servidorSpotify\ProjetoFinal\Model\PlaylistModel.class
+com\servidorSpotify\ProjetoFinal\ProjetoFinalApplication.class
+com\servidorSpotify\ProjetoFinal\Interface\UsuarioModelRepository.class
+com\servidorSpotify\ProjetoFinal\Model\ArtistaModel.class
+com\servidorSpotify\ProjetoFinal\Service\CorsConfig.class

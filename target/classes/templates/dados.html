@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<div class=" container">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../style/style.css">
+        <title class="title-principal">Dados do Spotify</title>
+    </head>
+    <body>
+    <div class="title-primary">
+        <h1>Dados do Spotify</h1>
+    </div>
+    <ul th:each="dados : ${dadosList}">
+        <li>
+            <div class="user-info">
+                <h2 class="informacao">Informações do Usuário</h2>
+                <p>Imagem: <img th:src="${dados.usuario.imagemUrlUsuario}" alt="Imagem do Usuário" class="img-pequena"
+                                src=""></p>
+                <p>Nome: <span th:text="${dados.usuario.nomeUsuario}"></span></p>
+                <p>Id Spotify: <span th:text="${dados.usuario.idSpotifyUsuario}"></span></p>
+            </div>
+
+            <div class="musica-info">
+                <h2 class="musicas">Músicas Curtidas</h2>
+                <ul>
+                    <li th:each="musica : ${dados.musicasCurtidas}">
+                        <span th:text="${musica.nomeDoArtista}"></span> - <span th:text="${musica.nomeMusica}"></span>
+                        (Álbum: <span th:text="${musica.nomeAlbum}"></span>)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="playlist-info">
+                <h2 class="playlist">Playlists</h2>
+                <ul>
+                    <li th:each="playlist : ${dados.playlists}">
+                        <a th:href="${playlist.uriPlaylist}" th:text="${playlist.namePlaylist}"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="artista-info">
+                <h2 class="artista">Top Artistas</h2>
+                <ul>
+                    <li th:each="artista : ${dados.topArtistas}">
+                        <img th:src="${artista.imagemUrlArtista}" alt="Imagem do Artista" class="img-pequena" src="">
+                        <span th:text="${artista.nomeArtista}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="carrinho-info">
+                <h2 class="carrinho">Carrinho de Compras</h2>
+                <ul>
+                    <li th:each="item : ${dados.carrinho}">
+                        <p>Nome da Playlist: <span th:text="${item.nome}"></span></p>
+                        <p>Quantidade: <span th:text="${item.quantidade}"></span></p>
+                        <p>Valor da Playlist: <span th:text="${item.valorDaPLaylist}"></span></p>
+                        <p>Valor Total: <span th:text="${item.valorTotal}"></span></p>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+    </ul>
+    <script>
+        function gerarPDF() {
+            window.location.href = "/gerar-pdf";
+        }
+    </script>
+
+    <button onclick="gerarPDF()">Gerar PDF</button>
+    </body>
+</div>
+</html>
